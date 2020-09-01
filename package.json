@@ -1,0 +1,30 @@
+{
+  "name": "beyond-iscool-backend",
+  "version": "1.0.0",
+  "description": "Beyond School Chatbot API",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byndcloud/beyond-iscool-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/byndcloud/beyond-iscool-backend/issues"
+  },
+  "homepage": "https://github.com/byndcloud/beyond-iscool-backend#readme",
+  "dependencies": {
+    "@nlpjs/basic": "^4.10.5",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "firebase-admin": "^9.1.1",
+    "node-nlp": "^4.10.5"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.0",
+    "@types/express": "^4.17.7"
+  }
+}
