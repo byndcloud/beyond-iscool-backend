@@ -117,7 +117,11 @@ app.put("/training-data/:id", async (req, res) => {
 app.post("/message", async (req, res) => {
   let { message } = req.body;
 
-  const manager = new NlpManager({ languages: ["en"], forceNER: true });
+  const manager = new NlpManager({
+    languages: ["en"],
+    forceNER: true,
+    autoSave: false,
+  });
   console.log(`Getting training data`);
   const trainingData = await getTrainingData();
 
@@ -141,7 +145,7 @@ app.post("/message", async (req, res) => {
     res.status(500).send("Internal Error, Sorry");
   }
 });
-
-app.listen(4000, () => {
-  console.log(`Started server! Listening on 4000`);
+const port = process.env.PORT || 4000;
+app.listen(port, () => {
+  console.log(`Started server! Listening on ${port}`);
 });
